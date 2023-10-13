@@ -1,0 +1,33 @@
+Aujourd'hui je me suis focalisé sur l'authentification des membres et gérer leurs droits.
+
+J'ai donc commencé par installer security et faire un make:user.
+J'ai ensuite créé une fonction getUsername qui sera utile pour JWT.
+J'ai ensuite créé 2 fake users avec Fixtures, un role USER et un role ADMIN.
+J'ai bien utilisé la classe UserPasswordHasherInterface pour hasher le password du user en bdd.
+
+Etant donné qu'une API REST est stateless (sans état) et qu'elle ne peut donc pas stocker les informations de l'utilisateurs en session,
+on a ici utilisé JWT (JSON Web Token) pour faire un premier appel pour s'authentifier qui retournera un token, encodé, qui contiendra les informations
+sur la personne qui vient de s'authentifier. Ensuite au prochain appel on ajoute dans le Header de la requete, Authorization et bearer + Token.
+
+J'ai utilisé le bundle LexikJWT pour générer des clefs, qui servent a encoder ou décoder le TOKEN.
+
+J'ai ensuite tout paramétré dans security.yaml et mis a jour la route dans routes.yaml.
+
+Ensuite j'ai fait les test sur POSTMAN via le lien que j'ai défini /api/login_check. 
+Il faut d'abord mettre dans le HEADER content-type et value: application/json pour bien renvoyer du JSON.
+J'ai donc fait une requete POST et dans le body j'ai ajouté username et password pour créé un user classique et un user admin.
+J'ai donc recu en réponse un token pour chacun que j'ai récupéré
+J'ai ensuite ajouter cette ligne #[IsGranted('ROLE_ADMIN', message: 'Vous n\'avez pas les droits suffisants pour ....')]
+au niveau des fonctions du CRUD que je voulais restreindre, comme un user classique ne pourrait pas créér de client, ou modifier un devis etc ..
+Et j'ai finalement pu faire mes test avec des requetes POST ou PUT pour créer/modifier des devis, clients devis-matériaux etc ..
+
+Je n'ai pas mis en place le systéme de pagination/cache ni versionner l'API ni la rendre AUTODECOUVRABLE.
+Sur le modéle de maturité de RICHARDSON je suis donc au niveau 2. Seul le niveau 3 avec les contrôles hypermedia n'est pas mis en place. Je pars du principe
+que cette api ne sera utilisé que par moi même et que le projet est relativement petit pour mettre en place ces autres systémes.
+
+
+
+
+
+
+

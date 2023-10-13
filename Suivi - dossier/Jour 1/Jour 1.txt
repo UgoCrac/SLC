@@ -1,0 +1,5 @@
+J'ai commencé par réfléchir aux fonctionnalités du site et ce qui pourrait être intéréssant de mettre en place.
+J'ai été regarder quelques sites d'entrepreneur en bâtiment pour m'inspirer de ce qui se fait.
+Ensuite j'ai fait le premier jet de la maquette pour imaginer à quoi pourrait ressembler le site.
+Une fois la maquette terminée j'ai commencer le MCD de ma base de données. C'est ce qui m'a pris le plus de temps pour réfléchir
+à toutes les tables a créer et les relations ( cardinalités ) entre les tables. En attente de validation par mon formateur.

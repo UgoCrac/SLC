@@ -1,0 +1,6 @@
+J'ai commencé par créer mon application next, j'ai ensuite vu directement comment communiquer entre mon app react et mon api symfonny. 
+Je suis donc tombé sur le bundle nelmio pour ajouter les paramétres dans mon api pour authoriser la connexion depuis le port 3000. 
+J'ai ensuite commencé a faire des fonctions test pour afficher les clients, faire la navbar avec creer un compte etc. 
+J'ai ensuite gérer les fonctions pour créer le compte et de faire un fetch post sur mon api. Une fois que la création de compte été ok et ajouter bien le nouvel
+utilisateur dans la bdd, j'ai regardé pour faire la fonction login et IMPORTANT, créer et récupérer le token JWT. Une fois le token récupéré, je l'ai extrait 
+dans un cookie pour le garder en mémoire et que ma navbar soit dynamique en fonction de si l'utilisateur est connecté ou non. J'ai ensuite fait le logout. 
