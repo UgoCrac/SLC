@@ -1,0 +1,7 @@
+.bg {
+    background-color: rgb(79, 79, 80);
+    width: 15vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}

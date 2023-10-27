@@ -1,55 +1,33 @@
 import Head from 'next/head';
+import styles from '../styles/Home.module.css';
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
+import Nav from '../components/Nav';
+import 'bootstrap/dist/css/bootstrap.css';
+import Header from '../components/Header';
+import Apropos from '../components/Apropos';
+import Realisation from '../components/Realisation';
+import Contact from '../components/Contact';
+import Footer from '../components/Footer';
+import Script from 'next/script';
 import Cookies from 'js-cookie';
 
 export default function Home() {
-  const [authToken, setAuthToken] = useState(null);
-
-  useEffect(() => {
-    // Récupérer le token du cookie
-    const token = Cookies.get('auth_token');
-    if (token) {
-      console.log(token);
-      setAuthToken(token);
-    }
-  }, []); // Hook UseEffect pour modifier le dom en fonction du token
-  // Tableau de dépendance vide pour que le code soit executé aprés le premier rendu
-
-  const handleLogout = () => {
-    // Effacer le token d'authentification du cookie
-    Cookies.remove('auth_token');
-    // Mise à jour de l'état de authToken
-    setAuthToken(null);
-  };
-
   return (
     <>
-      <h1>Test</h1>
-      <nav>
-        {authToken ? (
-          <>
-            <li>
-              <Link href="clients/showClients">Voir les clients</Link>
-            </li>
-            <li>
-              <Link href="clients/monCompte">Mon compte</Link>
-            </li>
-            <li>
-              <button onClick={handleLogout}>Se déconnecter</button>
-            </li>
-          </>
-        ) : (
-          <>
-            <li>
-              <Link href="/clients/login">Se connecter</Link>
-            </li>
-            <li>
-              <Link href="/clients/signup">Créer un compte</Link>
-            </li>
-          </>
-        )}
-      </nav>
+
+      <Link rel="preconnect" href="https://fonts.googleapis.com" />
+      <Link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+      <Link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet" />
+      <Link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+      <div className={styles.html}>
+        <Nav />
+        <Header />
+        <Apropos />
+        <Realisation />
+      </div>
+      <Contact />
+      <Footer />
+      <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" />
     </>
   );
 }

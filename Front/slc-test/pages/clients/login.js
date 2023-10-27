@@ -39,7 +39,8 @@ export default function login() {
             if (response.ok) {
                 const data = await response.json(); // Récupére la réponse a ma requete (ici le token JWT)
                 const token = data.token; // Stocker le token
-                Cookies.set('auth_token', token); // Conserver le token dans un cookie 
+                Cookies.set('auth_token', token); // Conserver le token dans un cookie
+                console.log(response);
                 router.push('/'); // Rediriger vers l'accueil
 
             } else {

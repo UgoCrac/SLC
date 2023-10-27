@@ -1,0 +1,2 @@
+Ce matin j'ai mis a jour la bdd pour ajouter la table message. J'ai ensuite modifier mon api et créer le crud pour les messages et 
+j'ai fait les tests pour ajouter un message en bdd et faire un get sur ce message. J'ai aussi mis en place le systéme de date.

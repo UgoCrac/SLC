@@ -1,0 +1,31 @@
+.carouselControlPrevIcon,
+.carouselControlNextIcon {
+    height: 100px;
+    width: 100px;
+}
+
+.carouselControlNextIcon:after {
+    content: '>';
+    font-size: 75px;
+    color: #7f5832;
+}
+
+.carouselControlPrevIcon:after {
+    content: '<';
+    font-size: 75px;
+    color: #7f5832;
+}
+
+
+.carousel img {
+    height: 75vh;
+}
+
+.montserrat {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+.margin {
+    margin-bottom: 13em;
+}

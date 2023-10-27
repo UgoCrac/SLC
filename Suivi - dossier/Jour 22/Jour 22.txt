@@ -1,0 +1,7 @@
+J'ai finis aujourd'hui la base de mon site en React avec Next.
+J'ai travailler sur les composants contact ( formulaire) et le footer.
+J'ai utilisé pour la zone de contact le form de bootstrap que j'ai installé avec "npm bootstrap".
+J'ai ensuite fais le footer et ai retravailler le style du site. Demain je devrais régler le formulaire avec des states et me renseigner pour envoyer un mail ou stocker le message.
+
+
+

@@ -1,0 +1,34 @@
+.textArea {
+    height: 180px;
+}
+
+.montserrat {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    color: rgb(218, 218, 218);
+    text-transform: uppercase;
+}
+
+.bg {
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(https://www.optimbtp.fr/wp-content/uploads/2020/12/logiciel-facture-btp-metal.jpg);
+    background-size: auto, cover;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    background-position: 50% 50%;
+}
+
+.bg::before {
+    position: absolute;
+    left: 0;
+    top: -6px;
+    transform: translate(7px, -50%) scale(.9, .9);
+    opacity: 1;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIyNTBweCIgdmlld0JveD0iMCAwIDEyODAgMTQwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9IiNmZmZmZmYiPjxwYXRoIGQ9Ik0wIDE0MGgxMjgwQzU3My4wOCAxNDAgMCAwIDAgMHoiIGZpbGwtb3BhY2l0eT0iLjMiLz48cGF0aCBkPSJNMCAxNDBoMTI4MEM1NzMuMDggMTQwIDAgMzAgMCAzMHoiIGZpbGwtb3BhY2l0eT0iLjUiLz48cGF0aCBkPSJNMCAxNDBoMTI4MEM1NzMuMDggMTQwIDAgNjAgMCA2MHoiLz48L2c+PC9zdmc+);
+    z-index: 1;
+    width: 100%;
+    transform: rotateX(180deg);
+    background-repeat: no-repeat;
+    height: 20%;
+    content: "";
+}
